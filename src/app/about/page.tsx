@@ -29,8 +29,7 @@ const About = () => {
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             Hi, I&apos;m Felipe Icaza, a certified JavaScript and Python developer
             with 4 years of experience creating scalable and user-friendly web
-            applications. I specialize in modern frameworks like React, Next.js,
-            and Django, turning complex challenges into seamless solutions.
+            applications.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
