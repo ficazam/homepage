@@ -2,12 +2,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { techs } from "../../../public/imgs/technologies";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: 'My Stack - Felipe Icaza',
-  description: 'Browse the technologies I&apos; learned and worked with; including React, React Native, NestJS, NextJS, and Django.'
-}
 
 const Services = () => {
   const cols = 4;

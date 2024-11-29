@@ -1,13 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Metadata } from "next";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title: 'About Me - Felipe Icaza',
-  description: 'Learn a little bit more about me - I&apos;m a React, React Native, NextJS and Django Developer.'
-}
-
 
 const About = () => {
   return (

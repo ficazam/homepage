@@ -3,12 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { techs } from "../../../public/imgs/technologies";
 import Image from "next/image";
 import { useState } from "react";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: 'Portfolio - Felipe Icaza',
-  description: 'Browse some of the projects I&apos;ve worked on, showcasing my skills in React, React Native, NextJS and Django.'
-}
 
 const projects = [
   {
