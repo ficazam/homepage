@@ -34,6 +34,11 @@ const About = () => {
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+            I specialize in modern frameworks like React, Next.js,
+            and Django, turning complex challenges into seamless solutions.
+          </p>
+
+          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             Beyond coding, I love exploring new technologies, hiking, and
             continuous learning. I&apos;m always open to collaborating on
             impactful projects and contributing to the tech community.

@@ -28,11 +28,11 @@ const Contact = () => {
             MAIL
           </span>
           <a
-            href="mailto:felipeicaza@gmail.com"
+            href="mailto:felipe@felipeicaza.dev"
             className="block font-body text-2xl relative group"
           >
             <span className="font-heading text-4xl mr-2">→</span>
-            felipeicaza@gmail.com
+            felipe@felipeicaza.dev
           </a>
         </div>
 
