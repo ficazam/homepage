@@ -7,7 +7,7 @@ export const HomeIcon = () => {
   const isHome = pathname === "/";
 
   return (
-    <Link href="/" className="absolute p-4 pt-10 left-[5%] z-50" aria-disabled={isHome}>
+    <Link href="/" className="absolute p-4 pt-10 left-[5%] z-50" aria-label='To Site Home'>
       <motion.div
         className="w-10 h-2 rounded-[15%] bg-transparent/20 border border-1 border-pink-800 mb-1"
         animate={{

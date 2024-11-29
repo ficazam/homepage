@@ -8,7 +8,7 @@ export const HamburgerButton = ({
   onClick: () => void;
 }) => {
   return (
-    <button className="absolute p-4 pt-10 right-[5%] z-50" onClick={onClick}>
+    <button className="absolute p-4 pt-10 right-[5%] z-50" aria-label="hamburger-menu-button" onClick={onClick}>
       <motion.div
         className="w-10 h-2 rounded-[15%] bg-transparent/20 border border-1 border-pink-800 mb-1"
         animate={{
