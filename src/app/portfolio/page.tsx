@@ -3,6 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { techs } from "../../../public/imgs/technologies";
 import Image from "next/image";
 import { useState } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Portfolio - Felipe Icaza',
+  description: 'Browse some of the projects I&apos;ve worked on, showcasing my skills in React, React Native, NextJS and Django.'
+}
 
 const projects = [
   {
@@ -59,7 +65,7 @@ const Portfolio = () => {
     >
       <div className="flex flex-col sm:flex-row items-center justify-evenly w-[90%] gap-x-0 sm:gap-x-10 gap-y-10 sm:gap-y-0 mt-20 sm:mt-0">
         <div className="w-full sm:w-[30%]">
-          <h1 className="text-6xl font-heading text-pink-500 leading-wide tracking-widest mb-8">
+          <h1 className="text-4xl text-center font-heading text-pink-500 leading-wide tracking-widest mb-8">
             Projects
           </h1>
 
