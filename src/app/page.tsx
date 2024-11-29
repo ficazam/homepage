@@ -1,118 +1,58 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { techs } from "../../public/imgs/technologies";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="text-center py-12"
-      >
-        <h1 className="text-5xl font-bold text-pink-500">
-          Hi, I&apos;m Felipe Icaza!
+    <motion.div
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex justify-center items-center min-h-screen text-white px-4"
+    >
+      <div className="text-center">
+        <h1 className="text-6xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
+          Hey! I&apos;m{" "}
+          <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            Felipe Icaza
+          </span>
         </h1>
-        <p className="mt-4 text-lg text-gray-700">
-          A certified Python & JavaScript web developer with 4 years of
-          experience building dynamic, scalable, and user-friendly applications.
+        <p className="mt-6 text-2xl text-gray-200 max-w-4xl mx-auto font-body">
+          I&apos;m a certified{" "}
+          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            JavaScript and Python web developer
+          </span>{" "}
         </p>
-        <div className="mt-6">
-          <a
-            href="/portfolio"
-            className="bg-pink-500 text-white py-3 px-6 rounded-full shadow-lg hover:bg-pink-600 transition"
-          >
-            View My Work
-          </a>
-        </div>
-      </motion.div>
+        <p className="font-body mt-6 text-2xl text-gray-200 max-w-4xl mx-auto">
+          I specialize in building applications using modern frameworks like{" "}
+          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            React & React Native, Next.js, and Django.
+          </span>
+        </p>
 
-      <div className="mt-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">
-          Technologies I Work With
-        </h2>
-        <div className="mt-8 grid grid-cols-4 gap-8">
-          {techs.map((tech) => (
-            <div className="flex flex-col items-center" key={tech.name}>
-              <Image src={tech.logo} alt={tech.name} width={32} height={32} />
-              <p className="mt-2 text-lg">{tech.name}</p>
-            </div>
-          ))}
+        <div className="flex flex-col sm:flex-row font-body justify-evenly items-center mt-10">
+          <div className="group relative inline-block">
+            <Link href="/about" className="group">
+              <span className="font-heading text-4xl mr-2">→</span>
+              <span className="font-body">Learn more about </span>
+              <span className="font-heading">me</span>
+            </Link>
+            <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+          </div>
+
+          <div className="group relative inline-block">
+            <Link href="/portfolio" className="group">
+              <span className="font-heading text-4xl mr-2">→</span>
+              <span className="font-body">Check out my </span>
+              <span className="font-heading">projects</span>
+            </Link>
+            <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+          </div>
         </div>
       </div>
-
-      <section className="mt-16 px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">About Me</h2>
-        <p className="mt-4 text-lg text-gray-700">
-          I transitioned into web development after 12 years in architecture and
-          construction. As a self-taught developer, I&apos;ve mastered Python,
-          JavaScript, and frameworks like React to build modern, scalable
-          applications. I&apos;m passionate about creating solutions that make a
-          real impact.
-        </p>
-        <div className="mt-6">
-          <a
-            href="/about"
-            className="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600"
-          >
-            Read My Full Story
-          </a>
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <h2 className="text-3xl font-bold text-center text-gray-800">
-          Featured Projects
-        </h2>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Project 1 */}
-          <div className="border rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="/project1.jpg"
-              alt="Project 1"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold text-gray-800">Project 1</h3>
-              <p className="mt-2 text-gray-600">
-                Description of the project. What was the problem, and how did
-                you solve it?
-              </p>
-              <div className="mt-4">
-                <a
-                  href="https://github.com/yourusername/project1"
-                  className="text-pink-500 hover:text-pink-600"
-                >
-                  View on GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* Add more projects here */}
-        </div>
-      </section>
-
-      <section className="mt-16 bg-gray-100 py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-800">
-          Let&apos;s Connect
-        </h2>
-        <p className="mt-4 text-center text-lg text-gray-600">
-          Interested in working together? I&apos;d love to hear from you.
-        </p>
-        <p className="mt-4 text-center text-lg text-gray-600">
-          Let&apos;s discuss how I can help!
-        </p>
-        <div className="mt-6 text-center">
-          <a
-            href="/contact"
-            className="bg-pink-500 text-white py-3 px-6 rounded-full shadow-lg hover:bg-pink-600"
-          >
-            Contact Me
-          </a>
-        </div>
-      </section>
-    </>
+    </motion.div>
   );
-}
+};
+
+export default Home;

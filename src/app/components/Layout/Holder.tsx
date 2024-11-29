@@ -1,13 +1,15 @@
+"use client";
+import { useState } from "react";
 import { ContentHolder } from "./Content-Holder";
-import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export const Holder = ({ children }: { children: React.ReactNode }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <ContentHolder>{children}</ContentHolder>
-      <Footer />
+    <div className="flex flex-col overflow-hidden">
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ContentHolder isOpen={isOpen}>{children}</ContentHolder>
     </div>
   );
 };

@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        heading: ["Prosto One", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
