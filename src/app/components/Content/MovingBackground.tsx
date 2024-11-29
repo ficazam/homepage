@@ -13,13 +13,18 @@ export const MovingBackground = () => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener("mousemove", handleMouse);
+    if (typeof window !== "undefined") {
+      window.addEventListener("mousemove", handleMouse);
 
-    return () => window.removeEventListener("mousemove", handleMouse);
+      return () => window.removeEventListener("mousemove", handleMouse);
+    }
   }, []);
 
-  const calcMovement = (axis: number, factor: number) =>
-    (axis - window.innerWidth / 2) * factor;
+  const calcMovement = (axis: number, factor: number) => {
+    if (typeof window !== "undefined") {
+      return (axis - window.innerWidth / 2) * factor;
+    }
+  };
 
   return (
     <div className="relative">
