@@ -13,7 +13,7 @@ export const HomeIcon = () => {
   return (
     <Link
       href="/"
-      className="absolute p-4 pt-10 left-[5%] z-50"
+      className="absolute p-4 left-[5%] top-0 sm:top-10 z-50"
       aria-label="To Site Home"
     >
       <Image
