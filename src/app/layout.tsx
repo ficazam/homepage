@@ -19,7 +19,10 @@ export const metadata: Metadata = {
   title: "Felipe Icaza - Web Developer",
   description:
     "Showcasing the skills and projects of Felipe Icaza, a passionate and experienced web developer specializing in React, Next.js, and FastAPI.",
-  openGraph: {
+  icons: {
+    icon: '/favico.ico'
+  },
+    openGraph: {
     title: "Felipe Icaza - Web Developer Portfolio",
     description:
       "Explore my projects and skills as a professional web developer. Specializing in building modern, scalable web applications.",
