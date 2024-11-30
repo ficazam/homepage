@@ -14,7 +14,7 @@ const About = () => {
       <h1 className="w-full mt-16 sm:mt-0 text-center text-6xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
         About{" "}
         <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-          ME
+          Me
         </span>
       </h1>
       <motion.span
@@ -29,8 +29,7 @@ const About = () => {
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             Hi, I&apos;m Felipe Icaza, a certified JavaScript and Python developer
             with 4 years of experience creating scalable and user-friendly web
-            applications. I specialize in modern frameworks like React, Next.js,
-            and Django, turning complex challenges into seamless solutions.
+            applications.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
