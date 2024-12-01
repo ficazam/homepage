@@ -33,6 +33,10 @@ export const techs = [
     logo: "/imgs/Next.js.png",
   },
   {
+    name: "Vite",
+    logo: "/imgs/Vite.png"
+  },
+  {
     name: "Python",
     logo: "/imgs/python-logo.png",
   },
@@ -64,4 +68,8 @@ export const techs = [
     name: "TailwindCSS",
     logo: "/imgs/Tailwind CSS.png",
   },
+  {
+    name: "MaterialUI",
+    logo: "/imgs/MUI.png"
+  }
 ];
