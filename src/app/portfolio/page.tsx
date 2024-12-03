@@ -47,14 +47,14 @@ const projects = [
     stack: ["FastAPI", "ReactJS", "Vite"],
   },
   {
-    title: "Scheduled Spotify Player",
+    title: "Spotify Player",
     type: "auto",
     description: "A Python-based automation that launches Spotify in a browser and plays a random lofi playlist at a scheduled time on weekdays. Customizable for multiple monitors and user-specific playlists, this project showcases proficiency in workflow automation and system-level scheduling.",
     stack: ["Python"],
     a_link: "https://github.com/ficazam/spotify-player"
   },
   {
-    title: "Scheduled Weather Messages",
+    title: "Weather Messages",
     type: "auto",
     description: "An advanced automation that integrates with a custom weather application, scrapes weather data, and sends scheduled WhatsApp messages. Built with Selenium, this project highlights expertise in data scraping, API integration, and browser automation for seamless task execution.",
     stack: ["Python"],
