@@ -18,7 +18,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Felipe Icaza - Web Developer",
   description:
-    "Showcasing the skills and projects of Felipe Icaza, a passionate and experienced web developer specializing in React, Next.js, and FastAPI.",
+    "Showcasing the skills and projects of Felipe Icaza, a passionate and experienced web developer specializing in React, NextJS, and FastAPI.",
   icons: {
     icon: '/favico.ico'
   },

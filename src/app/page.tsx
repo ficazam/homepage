@@ -13,21 +13,32 @@ const Home = () => {
     >
       <div className="text-center">
         <h1 className="text-6xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
-          Hey! I&apos;m{" "}
           <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
             Felipe Icaza
+          </span>
+        </h1>
+        <h1 className="text-3xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
+          <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            Senior React / NextJS Developer
           </span>
         </h1>
         <p className="mt-6 text-2xl text-gray-200 max-w-4xl mx-auto font-body">
           I&apos;m a certified{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            JavaScript and Python web developer
-          </span>{" "}
+            TypeScript and Python application developer
+          </span>
         </p>
         <p className="font-body mt-6 text-2xl text-gray-200 max-w-4xl mx-auto">
           I specialize in building applications using modern frameworks like{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            React & React Native, Next.js, and Django.
+            React & React Native, NextJS, and FastAPI.
+          </span>
+        </p>
+
+        <p className="font-body mt-6 text-lg text-gray-200 max-w-4xl mx-auto">
+          Eligibile under Canada&apos;s{" "}
+          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            Global Talent Stream.
           </span>
         </p>
 

@@ -27,14 +27,16 @@ const About = () => {
       <div className="flex justify-evenly items-center flex-col-reverse sm:flex-row">
         <div className="flex justify-evenly items-center flex-col">
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            Hi, I&apos;m Felipe Icaza, a certified JavaScript and Python developer
-            with 4 years of experience creating scalable and user-friendly web
-            applications.
+            Hi, I&apos;m Felipe Icaza, a certified TypeScript and Python
+            developer with over 5 years of experience building performant,
+            scalable web applications for clients in the U.S. and LATAM. My
+            focus is clean architecture, maintainability, and intuitive UX.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            I specialize in modern frameworks like React, Next.js,
-            and Django, turning complex challenges into seamless solutions.
+            I specialize in modern frameworks like React and NextJS, with NestJS
+            for backend development and FastAPI for microservices, turning
+            complex challenges into seamless solutions.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
@@ -45,6 +47,17 @@ const About = () => {
         </div>
 
         <div className="flex font-body justify-evenly items-center mt-4 sm:hidden">
+          <div className="group relative inline-block">
+            <a href="/portfolio" className="group">
+              <span className="font-heading text-4xl mr-2">→</span>
+              <span className="font-body">View my </span>
+              <span className="font-heading">projects</span>
+            </a>
+            <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+          </div>
+        </div>
+
+        <div className="flex font-body justify-evenly items-center sm:hidden">
           <div className="group relative inline-block">
             <a
               href="/pdf/FelipeIcaza_CV.pdf"
@@ -81,6 +94,21 @@ const About = () => {
           <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
         </div>
       </div>
+
+            <div className="hidden sm:flex font-body justify-evenly items-center">
+        <div className="group relative inline-block">
+          <a
+            href="/portfolio"
+            className="group"
+          >
+            <span className="font-heading text-4xl mr-2">→</span>
+            <span className="font-body">View my </span>
+            <span className="font-heading">projects</span>
+          </a>
+          <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+        </div>
+      </div>
+
     </motion.div>
   );
 };
