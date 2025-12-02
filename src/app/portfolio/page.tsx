@@ -6,6 +6,14 @@ import { useState } from "react";
 
 const projects = [
   {
+    title: "Atlas Link",
+    type: "web",
+    description:
+      "Atlas Link centralizes the entire alumni ecosystem. Admins can publish announcements, update profiles, manage VIPs, and run the platform end-to-end. Alumni can search, filter, and update their public information. This project demonstrates senior-level engineering: fully typed data flows, clean module boundaries, server-side rendering for all key routes, and a production-ready UI/UX.",
+    stack: ["ReactJS", "NextJS", "NestJS"],
+    deployment_link: "https://atlaslink.felipeicaza.dev",
+  },
+  {
     title: "Weather App",
     type: "web",
     description:
@@ -49,16 +57,18 @@ const projects = [
   {
     title: "Spotify Player",
     type: "auto",
-    description: "A Python-based automation that launches Spotify in a browser and plays a random lofi playlist at a scheduled time on weekdays. Customizable for multiple monitors and user-specific playlists, this project showcases proficiency in workflow automation and system-level scheduling.",
+    description:
+      "A Python-based automation that launches Spotify in a browser and plays a random lofi playlist at a scheduled time on weekdays. Customizable for multiple monitors and user-specific playlists, this project showcases proficiency in workflow automation and system-level scheduling.",
     stack: ["Python"],
-    a_link: "https://github.com/ficazam/spotify-player"
+    a_link: "https://github.com/ficazam/spotify-player",
   },
   {
     title: "Weather Messages",
     type: "auto",
-    description: "An advanced automation that integrates with a custom weather application, scrapes weather data, and sends scheduled WhatsApp messages. Built with Selenium, this project highlights expertise in data scraping, API integration, and browser automation for seamless task execution.",
+    description:
+      "An advanced automation that integrates with a custom weather application, scrapes weather data, and sends scheduled WhatsApp messages. Built with Selenium, this project highlights expertise in data scraping, API integration, and browser automation for seamless task execution.",
     stack: ["Python"],
-    a_link: "https://github.com/ficazam/selenium-whatsapp-automation"
+    a_link: "https://github.com/ficazam/selenium-whatsapp-automation",
   },
 ];
 
@@ -87,22 +97,24 @@ const Portfolio = () => {
               key={project.title}
             >
               <div className="flex">
-              <Image
-                key={project.type}
-                src={project.type === "web" ? "/imgs/web.png" : "/imgs/auto.png"}
-                alt={project.type}
-                width={24}
-                height={24}
-                className="mx-2"
-              />
-              <p
-                className={`text-xl font-heading text-pink-400 transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)] ${
-                  selected === index &&
-                  "text-white [text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]"
-                }`}
-              >
-                {project.title}
-              </p>
+                <Image
+                  key={project.type}
+                  src={
+                    project.type === "web" ? "/imgs/web.png" : "/imgs/auto.png"
+                  }
+                  alt={project.type}
+                  width={24}
+                  height={24}
+                  className="mx-2"
+                />
+                <p
+                  className={`text-xl font-heading text-pink-400 transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)] ${
+                    selected === index &&
+                    "text-white [text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]"
+                  }`}
+                >
+                  {project.title}
+                </p>
               </div>
               <span className="w-full h-[2px] bg-pink-400"></span>
             </div>
@@ -121,7 +133,10 @@ const Portfolio = () => {
             >
               <div className="h-full">
                 <h2 className="text-3xl font-semibold text-pink-500 font-heading">
-                  {projects[selected].type === "web" ? "Web Development" : "Automation"} - {projects[selected].title}
+                  {projects[selected].type === "web"
+                    ? "Web Development"
+                    : "Automation"}{" "}
+                  - {projects[selected].title}
                 </h2>
                 <p className="font-body text-pink-400 leading-wide text-xl">
                   Stack:{" "}
