@@ -34,7 +34,7 @@ export const techs = [
   },
   {
     name: "Vite",
-    logo: "/imgs/Vite.png"
+    logo: "/imgs/Vite.png",
   },
   {
     name: "Python",
@@ -70,6 +70,26 @@ export const techs = [
   },
   {
     name: "MaterialUI",
-    logo: "/imgs/MUI.png"
-  }
+    logo: "/imgs/MUI.png",
+  },
+  {
+    name: "Zod",
+    logo: "/imgs/Zod.png",
+  },
+  {
+    name: "RabbitMQ",
+    logo: "/imgs/rmq.png",
+  },
+  {
+    name: "Redis",
+    logo: "/imgs/redis.png",
+  },
+  {
+    name: "Docker",
+    logo: "/imgs/docker.png",
+  },
+  {
+    name: "Jest",
+    logo: "/imgs/jest.png",
+  },
 ];

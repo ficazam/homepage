@@ -1,80 +1,116 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
-import { techs } from "../../../public/imgs/technologies";
-import Image from "next/image";
-import { useState } from "react";
 
-const projects = [
-  // {
-  //   title: "Atlas Link",
-  //   type: "web",
-  //   description:
-  //     "Atlas Link centralizes the entire alumni ecosystem. Admins can publish announcements, update profiles, manage VIPs, and run the platform end-to-end. Alumni can search, filter, and update their public information. This project demonstrates senior-level engineering: fully typed data flows, clean module boundaries, server-side rendering for all key routes, and a production-ready UI/UX.",
-  //   stack: ["ReactJS", "NextJS", "NestJS"],
-  //   deployment_link: "https://atlaslink.io",
-  // },
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { techs } from "../../../public/imgs/technologies";
+
+type ProjectType = "web" | "mobile" | "auto";
+
+type Project = {
+  title: string;
+  type: ProjectType;
+  description: string;
+  impact?: string[];
+  role?: string;
+  stack?: string[];
+  fa_link?: string;
+  ba_link?: string;
+  deployment_link?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "Weather App",
+    title: "Atlas Link",
     type: "web",
     description:
-      "This real-time weather app offers an intuitive and visually engaging interface, providing users with live weather data, including temperature, humidity, wind speed, and more. Using the OpenWeather API and RechartsJS for data visualization, the app enables users to search for cities worldwide and view detailed weather insights with interactive graphs.",
-    stack: ["ReactJS", "Vite"],
-    fa_link: "https://github.com/Keefher/weather-app",
-    deployment_link: "https://weather-app-topaz-nu-28.vercel.app/",
+      "Full-stack TypeScript platform for a multi-tenant alumni directory. Case study coming soon — currently pending client release.",
+    // Safe to show stack, but no repos/links yet
+    stack: ["NextJS", "NestJS", "Supabase", "TypeScript"],
   },
   {
-    title: "Teacher's Aid",
+    title: "Y-GO Logistics",
     type: "web",
     description:
-      "Collaborating with education professionals, I developed a robust inventory management system for schools that streamlines the process of tracking and ordering supplies. Teachers can easily place orders for items in storage, while storage managers approve and deliver requested items to classrooms. The system also allows coordinators to oversee and approve items not already in inventory, ensuring smooth procurement and inventory management.",
-    stack: ["ReactJS", "NestJS"],
-    fa_link: "https://github.com/ficazam/TA_FRONT",
-    ba_link: "https://github.com/ficazam/TA_BACK",
+      "Production logistics platform for a Panama-based company with package tracking, invoices, and role-based access.",
+    impact: [
+      "Automated file & invoice workflows → ~60% less manual work",
+      "Faster internal operations for warehouse and office staff",
+      "Reliable daily use by company employees",
+    ],
+    role: "Full-stack development, API design, UI/UX structure, deployment pipeline.",
+    stack: ["FastAPI", "ReactJS", "Vite"],
   },
   {
     title: "Nurse Planner",
     type: "web",
     description:
-      "Working with medical professionals to better manage post-surgery patient care, I built a nurse scheduling system that simplifies the process of organizing home visits. This system allows for efficient scheduling, ensuring patients receive timely care from nurses, all while offering flexibility for last-minute adjustments and tracking of visit history.",
+      "Scheduling platform for a medical coordinator to assign home-visit nurses post-surgery.",
+    impact: [
+      "Reduced scheduling confusion; clear nurse availability at a glance",
+      "Faster planning for 20–50 simultaneous patients",
+      "Offline-ready PWA experience for nurses in the field",
+    ],
+    role: "Architected the system, built scheduling logic, and designed the UI workflow.",
     stack: ["ReactJS", "NextJS"],
     fa_link: "https://github.com/ficazam/nurseplanner-v1",
+  },
+  {
+    title: "Teacher's Aid",
+    type: "mobile",
+    description:
+      "Mobile app for school staff to handle supply requests and stock approvals.",
+    impact: [
+      "Simplified communication between teachers, coordinators, and storage managers",
+      "Replaced paper and WhatsApp threads with a single source of truth",
+      "Approval workflows reduce supply waste and missing items",
+    ],
+    role: "Built the entire frontend (React Native), backend schema, and UX flow.",
+    stack: ["ReactJS", "NestJS", "React Native"],
+  },
+  {
+    title: "Weather App",
+    type: "web",
+    description:
+      "Real-time weather dashboard using the OpenWeather API and RechartsJS for visualizations.",
+    stack: ["ReactJS", "Vite"],
+    fa_link: "https://github.com/Keefher/weather-app",
+    deployment_link: "https://weather-app-topaz-nu-28.vercel.app/",
   },
   {
     title: "Portfolio Website",
     type: "web",
     description:
-      "This website you're currently viewing is my personal portfolio, designed and developed from scratch to showcase my web development skills. Built using modern web technologies, it features seamless navigation, interactive elements, and a dynamic, responsive design. It's a reflection of my passion for creating engaging and functional websites that not only look great but also provide an exceptional user experience.",
+      "This portfolio site, designed and built from scratch to showcase my work. Modern stack, responsive layout, and interactive UI components.",
     stack: ["ReactJS", "NextJS"],
     fa_link: "https://github.com/ficazam/portfolio",
   },
-  {
-    title: "Y-GO App",
-    type: "web",
-    description:
-      "Currently working on revamping a comprehensive application for a package forwarding company, designed to streamline and enhance administrative processes. The system manages every aspect of the business, including user accounts, package tracking, invoice generation, supplier records, and subsidiary operations. This robust solution aims to improve efficiency, reduce errors, and provide an intuitive interface for the team, ensuring smooth day-to-day operations and scalability for future growth.",
-    stack: ["FastAPI", "ReactJS", "Vite"],
-  },
-  {
-    title: "Spotify Player",
-    type: "auto",
-    description:
-      "A Python-based automation that launches Spotify in a browser and plays a random lofi playlist at a scheduled time on weekdays. Customizable for multiple monitors and user-specific playlists, this project showcases proficiency in workflow automation and system-level scheduling.",
-    stack: ["Python"],
-    a_link: "https://github.com/ficazam/spotify-player",
-  },
-  {
-    title: "Weather Messages",
-    type: "auto",
-    description:
-      "An advanced automation that integrates with a custom weather application, scrapes weather data, and sends scheduled WhatsApp messages. Built with Selenium, this project highlights expertise in data scraping, API integration, and browser automation for seamless task execution.",
-    stack: ["Python"],
-    a_link: "https://github.com/ficazam/selenium-whatsapp-automation",
-  },
+  // If you re-add automation projects later, just set type: "auto"
 ];
+
+const getTypeLabel = (type: ProjectType) => {
+  switch (type) {
+    case "web":
+      return "Web Application";
+    case "mobile":
+      return "Mobile Application";
+    case "auto":
+      return "Automation";
+    default:
+      return "Project";
+  }
+};
+
+const getTypeIcon = (type: ProjectType) => {
+  if (type === "web") return "/imgs/web.png";
+  if (type === "mobile") return "/imgs/mobile.png"; // add this icon to your assets
+  return "/imgs/auto.png";
+};
 
 const Portfolio = () => {
   const [selected, setSelected] = useState<number>(0);
-  const handleSelect = (i: number) => setSelected(i);
+
+  const selectedProject = projects[selected];
 
   return (
     <motion.div
@@ -85,23 +121,22 @@ const Portfolio = () => {
       className="flex flex-col justify-center items-center min-h-screen text-white px-4"
     >
       <div className="flex flex-col sm:flex-row items-center justify-evenly w-[90%] gap-x-0 sm:gap-x-10 gap-y-10 sm:gap-y-0 mt-20 sm:mt-0">
+        {/* LEFT: Project list */}
         <div className="w-full sm:w-[30%]">
-          <h1 className="text-6xl text-center font-heading text-pink-500 leading-wide tracking-widest mb-8">
+          <h1 className="text-5xl sm:text-6xl text-center font-heading text-pink-500 leading-wide tracking-widest mb-8">
             Projects
           </h1>
 
           {projects.map((project, index) => (
-            <div
-              className="flex flex-col justify-center items-start gap-y-3 mt-3 cursor-pointer"
-              onClick={() => handleSelect(index)}
+            <button
+              type="button"
+              onClick={() => setSelected(index)}
               key={project.title}
+              className="flex flex-col justify-center items-start gap-y-3 mt-3 cursor-pointer w-full text-left"
             >
-              <div className="flex">
+              <div className="flex items-center">
                 <Image
-                  key={project.type}
-                  src={
-                    project.type === "web" ? "/imgs/web.png" : "/imgs/auto.png"
-                  }
+                  src={getTypeIcon(project.type)}
                   alt={project.type}
                   width={24}
                   height={24}
@@ -116,8 +151,8 @@ const Portfolio = () => {
                   {project.title}
                 </p>
               </div>
-              <span className="w-full h-[2px] bg-pink-400"></span>
-            </div>
+              <span className="w-full h-[2px] bg-pink-400" />
+            </button>
           ))}
         </div>
 
@@ -132,80 +167,88 @@ const Portfolio = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="h-full">
-                <h2 className="text-3xl font-semibold text-pink-500 font-heading">
-                  {projects[selected].type === "web"
-                    ? "Web Development"
-                    : "Automation"}{" "}
-                  - {projects[selected].title}
+                <h2 className="text-2xl sm:text-3xl font-semibold text-pink-500 font-heading mb-2">
+                  {getTypeLabel(selectedProject.type)} – {selectedProject.title}
                 </h2>
-                <p className="font-body text-pink-400 leading-wide text-xl">
-                  Stack:{" "}
-                </p>
-                <div className="flex my-2">
-                  {techs.map(
-                    (tech) =>
-                      projects[selected].stack.includes(tech.name) && (
-                        <Image
-                          key={tech.name}
-                          src={tech.logo}
-                          alt={tech.name}
-                          width={24}
-                          height={24}
-                          className="mx-2"
-                        />
-                      )
-                  )}
-                </div>
+
+                {selectedProject.stack && selectedProject.stack.length > 0 && (
+                  <>
+                    <p className="font-body text-pink-400 leading-wide text-xl">
+                      Stack:
+                    </p>
+                    <div className="flex flex-wrap my-2">
+                      {techs.map(
+                        (tech) =>
+                          selectedProject.stack?.includes(tech.name) && (
+                            <Image
+                              key={tech.name}
+                              src={tech.logo}
+                              alt={tech.name}
+                              width={24}
+                              height={24}
+                              className="mx-2 my-1"
+                            />
+                          )
+                      )}
+                    </div>
+                  </>
+                )}
+
                 <p className="text-lg text-gray-300 mb-4">
-                  {projects[selected].description}
+                  {selectedProject.description}
                 </p>
-                <div className="flex flex-col items-start justify-end">
-                  {projects[selected].deployment_link && (
+
+                {selectedProject.impact &&
+                  selectedProject.impact.length > 0 && (
+                    <ul className="list-disc list-inside text-gray-300 mb-4 space-y-1">
+                      {selectedProject.impact.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                {selectedProject.role && (
+                  <p className="text-gray-300 mb-4">
+                    <span className="font-semibold text-pink-400">Role: </span>
+                    {selectedProject.role}
+                  </p>
+                )}
+
+                <div className="flex flex-col items-start justify-end gap-2">
+                  {selectedProject.deployment_link && (
                     <a
-                      href={projects[selected].deployment_link}
+                      href={selectedProject.deployment_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
                     >
-                      <span className="font-heading text-4xl mr-2">→</span>
+                      <span className="font-heading text-3xl mr-2">→</span>
                       View App Homepage
-                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
                     </a>
                   )}
-                  {projects[selected].fa_link && (
+                  {selectedProject.fa_link && (
                     <a
-                      href={projects[selected].fa_link}
+                      href={selectedProject.fa_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
                     >
-                      <span className="font-heading text-4xl mr-2">→</span>
+                      <span className="font-heading text-3xl mr-2">→</span>
                       View Frontend Repo on GitHub
-                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
                     </a>
                   )}
-                  {projects[selected].ba_link && (
+                  {selectedProject.ba_link && (
                     <a
-                      href={projects[selected].ba_link}
+                      href={selectedProject.ba_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
                     >
-                      <span className="font-heading text-4xl mr-2">→</span>
+                      <span className="font-heading text-3xl mr-2">→</span>
                       View Backend Repo on GitHub
-                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
-                    </a>
-                  )}
-                  {projects[selected].a_link && (
-                    <a
-                      href={projects[selected].a_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
-                    >
-                      <span className="font-heading text-4xl mr-2">→</span>
-                      View Automation Repo on GitHub
-                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
                     </a>
                   )}
                 </div>

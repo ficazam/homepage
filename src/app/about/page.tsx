@@ -27,22 +27,31 @@ const About = () => {
       <div className="flex justify-evenly items-center flex-col-reverse sm:flex-row">
         <div className="flex justify-evenly items-center flex-col">
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            Hi, I&apos;m Felipe Icaza, a certified TypeScript and Python
-            developer with over 5 years of experience building performant,
-            scalable web applications for clients in the U.S. and LATAM. My
-            focus is clean architecture, maintainability, and intuitive UX.
+            Hi, I&apos;m Felipe Icaza — a Senior Full-Stack TypeScript Engineer
+            with 6+ years of experience building and modernizing web
+            applications across the U.S., Canada, and LATAM. I work with React,
+            Next.js, Node/NestJS, FastAPI, and PostgreSQL, with a strong focus
+            on clean architecture, maintainability, and high-quality user
+            experiences.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            I specialize in modern frameworks like React and NextJS, with NestJS
-            for backend development and FastAPI for microservices, turning
-            complex challenges into seamless solutions.
+            I enjoy owning a product slice end-to-end — building fast, polished
+            frontends, reliable backend services, and deployments that are
+            predictable and stable. My recent work spans enterprise platform
+            modernization, logistics automation, and large-scale TypeScript
+            applications.
           </p>
 
           <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            Beyond coding, I love exploring new technologies, hiking, and
-            continuous learning. I&apos;m always open to collaborating on
-            impactful projects and contributing to the tech community.
+            Outside of work, I explore new technologies, hike, and continue
+            growing as an engineer.
+          </p>
+
+          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+            Open to senior roles in Alberta or the GTA, with quick relocation
+            via GTS and long-term plans through Alberta&apos;s Tech Pathway
+            (AAIP).
           </p>
         </div>
 
@@ -60,8 +69,8 @@ const About = () => {
         <div className="flex font-body justify-evenly items-center sm:hidden">
           <div className="group relative inline-block">
             <a
-              href="/pdf/FelipeIcaza_CV.pdf"
-              download="FelipeIcaza_CV"
+              href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
+              download="FelipeIcaza_SeniorReactDeveloper.pdf"
               className="group"
             >
               <span className="font-heading text-4xl mr-2">→</span>
@@ -95,12 +104,9 @@ const About = () => {
         </div>
       </div>
 
-            <div className="hidden sm:flex font-body justify-evenly items-center">
+      <div className="hidden sm:flex font-body justify-evenly items-center">
         <div className="group relative inline-block">
-          <a
-            href="/portfolio"
-            className="group"
-          >
+          <a href="/portfolio" className="group">
             <span className="font-heading text-4xl mr-2">→</span>
             <span className="font-body">View my </span>
             <span className="font-heading">projects</span>
@@ -108,7 +114,6 @@ const About = () => {
           <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
         </div>
       </div>
-
     </motion.div>
   );
 };

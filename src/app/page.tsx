@@ -17,29 +17,37 @@ const Home = () => {
             Felipe Icaza
           </span>
         </h1>
-        <h1 className="text-3xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
+        <h2 className="text-3xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
           <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            Senior React / NextJS Developer
+            Senior Full-Stack TypeScript Engineer
           </span>
-        </h1>
+        </h2>
         <p className="mt-6 text-2xl text-gray-200 max-w-4xl mx-auto font-body">
           I&apos;m a certified{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            TypeScript and Python application developer
+            TypeScript application developer
           </span>
         </p>
         <p className="font-body mt-6 text-2xl text-gray-200 max-w-4xl mx-auto">
-          I specialize in building applications using modern frameworks like{" "}
+          I build and modernize production web platforms using{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            React & React Native, NextJS, and FastAPI.
+            React & React Native, NextJS, and Node/NestJS.
           </span>
         </p>
 
         <p className="font-body mt-6 text-lg text-gray-200 max-w-4xl mx-auto">
-          Eligibile under Canada&apos;s{" "}
+          Targeting roles in Alberta and the GTA
+        </p>
+
+        <p className="font-body mt-2 text-lg text-gray-200 max-w-4xl mx-auto">
+          Eligible for Canada&apos;s{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            Global Talent Stream.
+            Global Talent Stream
           </span>
+        </p>
+
+        <p className="font-body mt-2 text-md text-gray-200 max-w-4xl mx-auto">
+          (fast 2-3 week relocation)
         </p>
 
         <div className="flex flex-col sm:flex-row font-body justify-evenly items-center mt-10">

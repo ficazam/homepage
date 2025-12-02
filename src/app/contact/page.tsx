@@ -67,8 +67,8 @@ const Contact = () => {
             MY RESUME
           </span>
           <a
-            href="/pdf/FelipeIcaza_CV.pdf"
-            download="FelipeIcaza_CV"
+            href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
+            download="FelipeIcaza_SeniorReactDeveloper.pdf"
             className="block font-body text-2xl relative group"
           >
             <span className="font-heading text-4xl mr-2">→</span>
