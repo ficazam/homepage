@@ -5,14 +5,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 const projects = [
-  {
-    title: "Atlas Link",
-    type: "web",
-    description:
-      "Atlas Link centralizes the entire alumni ecosystem. Admins can publish announcements, update profiles, manage VIPs, and run the platform end-to-end. Alumni can search, filter, and update their public information. This project demonstrates senior-level engineering: fully typed data flows, clean module boundaries, server-side rendering for all key routes, and a production-ready UI/UX.",
-    stack: ["ReactJS", "NextJS", "NestJS"],
-    deployment_link: "https://atlaslink.felipeicaza.dev",
-  },
+  // {
+  //   title: "Atlas Link",
+  //   type: "web",
+  //   description:
+  //     "Atlas Link centralizes the entire alumni ecosystem. Admins can publish announcements, update profiles, manage VIPs, and run the platform end-to-end. Alumni can search, filter, and update their public information. This project demonstrates senior-level engineering: fully typed data flows, clean module boundaries, server-side rendering for all key routes, and a production-ready UI/UX.",
+  //   stack: ["ReactJS", "NextJS", "NestJS"],
+  //   deployment_link: "https://atlaslink.io",
+  // },
   {
     title: "Weather App",
     type: "web",
