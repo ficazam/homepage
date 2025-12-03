@@ -24,9 +24,9 @@ const About = () => {
         transition={{ ease: "easeInOut", duration: 0.7, delay: 0.2 }}
       />
 
-      <div className="flex justify-evenly items-center flex-col-reverse sm:flex-row">
+      <div className="flex justify-evenly sm:justify-around w-full items-center flex-col-reverse sm:flex-row">
         <div className="flex justify-evenly items-center flex-col">
-          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+          <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             Hi, I&apos;m Felipe Icaza — a Senior Full-Stack TypeScript Engineer
             with 6+ years of experience building and modernizing web
             applications across the U.S., Canada, and LATAM. I work with React,
@@ -35,7 +35,7 @@ const About = () => {
             experiences.
           </p>
 
-          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+          <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             I enjoy owning a product slice end-to-end — building fast, polished
             frontends, reliable backend services, and deployments that are
             predictable and stable. My recent work spans enterprise platform
@@ -43,30 +43,45 @@ const About = () => {
             applications.
           </p>
 
-          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+          <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto ml-[-1] font-body text-justify sm:text-start">
             Outside of work, I explore new technologies, hike, and continue
             growing as an engineer.
           </p>
 
-          <p className="mt-6 text-xl text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+          <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
             Open to senior roles in Alberta or the GTA, with quick relocation
             via GTS and long-term plans through Alberta&apos;s Tech Pathway
             (AAIP).
           </p>
-        </div>
 
-        <div className="flex font-body justify-evenly items-center mt-4 sm:hidden">
-          <div className="group relative inline-block">
-            <a href="/portfolio" className="group">
-              <span className="font-heading text-4xl mr-2">→</span>
-              <span className="font-body">View my </span>
-              <span className="font-heading">projects</span>
-            </a>
-            <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+          <div className="hidden sm:flex font-body justify-start items-center w-full">
+            <div className="group relative inline-block">
+              <a
+                href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
+                download="FelipeIcaza_SeniorReactDeveloper.pdf"
+                className="group"
+              >
+                <span className="font-heading text-4xl mr-2">→</span>
+                <span className="font-body">Download my </span>
+                <span className="font-heading">CV</span>
+              </a>
+              <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+            </div>
+          </div>
+
+          <div className="hidden sm:flex font-body justify-start items-center w-full">
+            <div className="group relative inline-block">
+              <a href="/portfolio" className="group">
+                <span className="font-heading text-4xl mr-2">→</span>
+                <span className="font-body">View my </span>
+                <span className="font-heading">projects</span>
+              </a>
+              <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
+            </div>
           </div>
         </div>
 
-        <div className="flex font-body justify-evenly items-center sm:hidden">
+        <div className="flex font-body justify-evenly items-center sm:hidden w-full">
           <div className="group relative inline-block">
             <a
               href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
@@ -84,35 +99,10 @@ const About = () => {
         <Image
           src="/PROFILE.jpg"
           alt="Felipe Icaza - Web Developer"
-          height={450}
-          width={450}
-          className="mr-[-10] rounded-[25%]"
+          height={300}
+          width={300}
+          className="mr-[-10] rounded-[25%] object-cover"
         />
-      </div>
-      <div className="hidden sm:flex font-body justify-evenly items-center mt-10">
-        <div className="group relative inline-block">
-          <a
-            href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
-            download="FelipeIcaza_SeniorReactDeveloper.pdf"
-            className="group"
-          >
-            <span className="font-heading text-4xl mr-2">→</span>
-            <span className="font-body">Download my </span>
-            <span className="font-heading">CV</span>
-          </a>
-          <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
-        </div>
-      </div>
-
-      <div className="hidden sm:flex font-body justify-evenly items-center">
-        <div className="group relative inline-block">
-          <a href="/portfolio" className="group">
-            <span className="font-heading text-4xl mr-2">→</span>
-            <span className="font-body">View my </span>
-            <span className="font-heading">projects</span>
-          </a>
-          <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-400" />
-        </div>
       </div>
     </motion.div>
   );

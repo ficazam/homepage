@@ -44,14 +44,14 @@ const Services = () => {
           transition={{ ease: "easeInOut", duration: 0.7, delay: 0.2 }}
         />
 
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-5">
           {groupedTechs.map((row, rowIndex) =>
             row.map((tech, colIndex) => {
               const itemIndex = rowIndex * cols + colIndex;
               return (
                 <motion.div
                   key={tech.name}
-                  className="flex flex-col items-center m-5"
+                  className="flex flex-col items-center"
                   custom={itemIndex}
                   initial="hidden"
                   animate="visible"
@@ -63,7 +63,7 @@ const Services = () => {
                     width={32}
                     height={32}
                   />
-                  <p className="mt-2 text-lg">{tech.name}</p>
+                  <p className="text-lg">{tech.name}</p>
                 </motion.div>
               );
             })
