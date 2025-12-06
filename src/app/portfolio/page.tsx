@@ -25,8 +25,22 @@ const projects: Project[] = [
     type: "web",
     description:
       "Full-stack TypeScript platform for a multi-tenant alumni directory. Case study coming soon — currently pending client release.",
-    // Safe to show stack, but no repos/links yet
-    stack: ["NextJS", "NestJS", "Supabase", "TypeScript"],
+    stack: ["NextJS", "NestJS", "TypeScript"],
+  },
+  {
+    title: "GlassBoard — Realtime Kanban Board",
+    type: "web",
+    description:
+      "A realtime collaborative kanban board built with Next.js 16, NestJS WebSocket Gateway, typed shared contracts, and motion-driven UI. Open two tabs and watch every drag, drop, and update sync instantly.",
+    impact: [
+      "Zero drift: FE + BE share one contracts package for schemas & events.",
+      "Realtime sync: Server-authoritative updates broadcast instantly to all clients.",
+      "Smooth UX: Drag-and-drop with optimistic motion for a modern, fluid feel.",
+      "Prod-ready setup: Monorepo, typed APIs, and full Render + Vercel deployment.",
+    ],
+    stack: ["NextJS", "NestJS", "TypeScript"],
+    fa_link: "https://github.com/ficazam/glassboard",
+    deployment_link: "https://glassboard.felipeicaza.dev",
   },
   {
     title: "Y-GO Logistics",
@@ -85,7 +99,6 @@ const projects: Project[] = [
     stack: ["ReactJS", "NextJS"],
     fa_link: "https://github.com/ficazam/portfolio",
   },
-  // If you re-add automation projects later, just set type: "auto"
 ];
 
 const getTypeLabel = (type: ProjectType) => {
@@ -103,7 +116,7 @@ const getTypeLabel = (type: ProjectType) => {
 
 const getTypeIcon = (type: ProjectType) => {
   if (type === "web") return "/imgs/web.png";
-  if (type === "mobile") return "/imgs/mobile.png"; // add this icon to your assets
+  if (type === "mobile") return "/imgs/mobile.png";
   return "/imgs/auto.png";
 };
 
@@ -121,7 +134,6 @@ const Portfolio = () => {
       className="flex flex-col justify-center items-center min-h-screen text-white px-4"
     >
       <div className="flex flex-col sm:flex-row items-center justify-evenly w-[90%] gap-x-0 sm:gap-x-10 gap-y-10 sm:gap-y-0 mt-20 sm:mt-0">
-        {/* LEFT: Project list */}
         <div className="w-full sm:w-[30%]">
           <h1 className="text-5xl sm:text-6xl text-center font-heading text-pink-500 leading-wide tracking-widest mb-8">
             Projects
