@@ -28,6 +28,22 @@ const projects: Project[] = [
     stack: ["NextJS", "NestJS", "TypeScript"],
   },
   {
+    title: "Glassforge — UI Generator",
+    type: "web",
+    description:
+      "A prompt-based UI card generator built with Next.js, Tailwind, and Framer Motion. Users type a natural-language description and get a luxury, black-card-style glassmorphism UI card. Designed as a cost-free, Vercel-ready demo that feels AI-powered without requiring real OpenAI calls.",
+    impact: [
+      "Designing a luxury, black-card-style UI that feels “expensive” at a glance.",
+      "Building a prompt → template pipeline that feels AI-powered but runs entirely client-side.",
+      "Structuring templates so adding new card types is trivial.",
+      "Prod-ready setup: Monorepo, typed APIs, and full Render + Vercel deployment.",
+      "Making the project dead-simple to clone and deploy on Vercel."
+    ],
+    stack: ["NextJS", "TypeScript"],
+    fa_link: "https://github.com/ficazam/glassforge",
+    deployment_link: "https://glassforge.felipeicaza.dev",
+  },
+  {
     title: "GlassBoard — Realtime Kanban Board",
     type: "web",
     description:
