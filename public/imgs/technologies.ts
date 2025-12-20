@@ -92,4 +92,16 @@ export const techs = [
     name: "Jest",
     logo: "/imgs/jest.png",
   },
+  {
+    name: "PostgreSQL",
+    logo: "/imgs/postgresql.png",
+  },
+  {
+    name: "Cloudflare",
+    logo: "/imgs/cloudflare.png",
+  },
+  {
+    name: "Supabase",
+    logo: "/imgs/supabase.png",
+  },
 ];

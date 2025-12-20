@@ -24,8 +24,22 @@ const projects: Project[] = [
     title: "Atlas Link",
     type: "web",
     description:
-      "Full-stack TypeScript platform for a multi-tenant alumni directory. Case study coming soon — currently pending client release.",
-    stack: ["NextJS", "NestJS", "TypeScript"],
+      "Private professional networking platform for the Chevening alumni community in Panama. Verified onboarding, rich alumni profiles, and fast discovery via search and filters.",
+    impact: [
+      "Built a verified onboarding + approval flow to keep the network private and trusted.",
+      "Designed searchable alumni profiles (award year, UK university, sector, areas of impact) with fast discovery UX.",
+      "Delivered a production-ready full-stack platform with clear system boundaries and a clean separation between auth, data, and discovery flows.",
+      "Hardened security posture with SSL/TLS and Cloudflare protections.",
+    ],
+    stack: [
+      "NextJS",
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "Supabase",
+      "Cloudflare",
+    ],
+    deployment_link: "https://atlaslink.io",
   },
   {
     title: "Glassforge — UI Generator",
@@ -37,9 +51,9 @@ const projects: Project[] = [
       "Building a prompt → template pipeline that feels AI-powered but runs entirely client-side.",
       "Structuring templates so adding new card types is trivial.",
       "Prod-ready setup: Monorepo, typed APIs, and full Render + Vercel deployment.",
-      "Making the project dead-simple to clone and deploy on Vercel."
+      "Making the project dead-simple to clone and deploy on Vercel.",
     ],
-    stack: ["NextJS", "TypeScript"],
+    stack: ["NextJS", "TypeScript", "Cloudflare"],
     fa_link: "https://github.com/ficazam/glassforge",
     deployment_link: "https://glassforge.felipeicaza.dev",
   },
@@ -54,7 +68,7 @@ const projects: Project[] = [
       "Smooth UX: Drag-and-drop with optimistic motion for a modern, fluid feel.",
       "Prod-ready setup: Monorepo, typed APIs, and full Render + Vercel deployment.",
     ],
-    stack: ["NextJS", "NestJS", "TypeScript"],
+    stack: ["NextJS", "NestJS", "TypeScript", "cloudflare"],
     fa_link: "https://github.com/ficazam/glassboard",
     deployment_link: "https://glassboard.felipeicaza.dev",
   },
@@ -112,7 +126,7 @@ const projects: Project[] = [
     type: "web",
     description:
       "This portfolio site, designed and built from scratch to showcase my work. Modern stack, responsive layout, and interactive UI components.",
-    stack: ["ReactJS", "NextJS"],
+    stack: ["ReactJS", "NextJS", "Cloudflare"],
     fa_link: "https://github.com/ficazam/portfolio",
   },
 ];
@@ -212,6 +226,8 @@ const Portfolio = () => {
                               key={tech.name}
                               src={tech.logo}
                               alt={tech.name}
+                              title={tech.name}
+                              aria-label={tech.name}
                               width={24}
                               height={24}
                               className="mx-2 my-1"
