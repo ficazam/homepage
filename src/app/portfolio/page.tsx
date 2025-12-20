@@ -119,7 +119,7 @@ const projects: Project[] = [
       "Real-time weather dashboard using the OpenWeather API and RechartsJS for visualizations.",
     stack: ["ReactJS", "Vite"],
     fa_link: "https://github.com/Keefher/weather-app",
-    deployment_link: "https://weather-app-topaz-nu-28.vercel.app/",
+    deployment_link: "https://weather.felipeicaza.dev/",
   },
   {
     title: "Portfolio Website",
