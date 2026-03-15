@@ -57,8 +57,8 @@ const About = () => {
           <div className="hidden sm:flex font-body justify-start items-center w-full">
             <div className="group relative inline-block">
               <a
-                href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
-                download="FelipeIcaza_SeniorReactDeveloper.pdf"
+                href="/pdf/FelipeIcaza_FullStack_Developer.pdf"
+                download="FelipeIcaza_FullStack_Developer.pdf"
                 className="group"
               >
                 <span className="font-heading text-4xl mr-2">→</span>
@@ -84,8 +84,8 @@ const About = () => {
         <div className="flex font-body justify-evenly items-center sm:hidden w-full">
           <div className="group relative inline-block">
             <a
-              href="/pdf/FelipeIcaza_SeniorReactDeveloper.pdf"
-              download="FelipeIcaza_SeniorReactDeveloper.pdf"
+              href="/pdf/FelipeIcaza_FullStack_Developer.pdf"
+              download="FelipeIcaza_FullStack_Developer.pdf"
               className="group"
             >
               <span className="font-heading text-4xl mr-2">→</span>
