@@ -27,12 +27,17 @@ const About = () => {
       <div className="flex justify-evenly sm:justify-around w-full items-center flex-col-reverse sm:flex-row">
         <div className="flex justify-evenly items-center flex-col">
           <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
-            Hi, I&apos;m Felipe Icaza — a Senior Full-Stack TypeScript Engineer
-            with 6+ years of experience building and modernizing web
-            applications across the U.S., Canada, and LATAM. I work with React,
-            Next.js, Node/NestJS, FastAPI, and PostgreSQL, with a strong focus
-            on clean architecture, maintainability, and high-quality user
-            experiences.
+            Hi, I'm Felipe Icaza — a Senior Full-Stack TypeScript Engineer with
+            5+ years of experience building and modernizing web applications
+            across the U.S., Canada, and LATAM. I work with React, Next.js,
+            Node/NestJS, FastAPI, and PostgreSQL, with a strong focus on clean
+            architecture, maintainability, and high-quality user experiences.
+          </p>
+
+          <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
+            Increasingly, my work sits at the intersection of software
+            engineering and AI — designing and building multi-agent systems,
+            autonomous pipelines, and AI-powered tooling from the ground up.
           </p>
 
           <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto font-body text-justify sm:text-start">
@@ -40,7 +45,7 @@ const About = () => {
             frontends, reliable backend services, and deployments that are
             predictable and stable. My recent work spans enterprise platform
             modernization, logistics automation, and large-scale TypeScript
-            applications.
+            applications, and AI infrastructure.
           </p>
 
           <p className="mt-2 text-md text-gray-200 max-w-3xl mx-auto ml-[-1] font-body text-justify sm:text-start">
