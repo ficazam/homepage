@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { techs } from "../../../public/imgs/technologies";
 
-type ProjectType = "web" | "mobile" | "auto";
+type ProjectType = "web" | "mobile" | "auto" | "ai";
 
 type Project = {
   title: string;
@@ -16,10 +16,48 @@ type Project = {
   stack?: string[];
   fa_link?: string;
   ba_link?: string;
+  repo_link?: string;
   deployment_link?: string;
 };
 
 const projects: Project[] = [
+  {
+    title: "AI Infrastructure - AELISSE",
+    type: "ai",
+    description:
+      "Autonomous Engineering Lifecycle Intelligence: Systems Executor — an AI co-engineer that onboards itself into any codebase and operates as a permanent collaborator. Designed and built from scratch including the orchestration pipeline, MCP filesystem server, eval suite, and provider abstraction layer.",
+    impact: [
+      "Designed a three-subagent pipeline (Explorer → Analyzer → Writer) that generates complete project intelligence — context, domain rules, and skill files — from a single command.",
+      "Built a custom MCP server with 5 tools enabling agents to read, search, and write across any codebase autonomously.",
+      "Shipped a three-suite eval system that validates output quality on every run with zero manual review.",
+      "Deployed against real production codebases — autonomously diagnosed and resolved bugs, opened PRs, and closed tickets without human implementation.",
+    ],
+    stack: ["TypeScript", "Bun", "Anthropic", "MCP"],
+    repo_link: "https://github.com/ficazam/aelisse",
+  },
+  // {
+  //   title: "MARCUS — AI Bid Analyzer",
+  //   type: "ai",
+  //   description:
+  //     "Managed Architectural Review, Clarification & Understanding System - an AI internal tool for architectural firms to analyze bid documents. Upload a PDF, get a fully structured breakdown — scope items, exclusions, red flags, clarifications, assumptions, alternates, and allowances — in seconds.",
+  //   impact: [
+  //     "Built a PDF → Claude → structured JSON pipeline using base64 document blocks and Zod validation.",
+  //     "Designed a monorepo with shared types package ensuring frontend and backend stay in sync.",
+  //     "Delivered a tabbed dashboard that surfaces every line item from a bid document with status categorization.",
+  //     "Zero data leaves the firm — PDFs processed in memory, never stored on disk.",
+  //   ],
+  //   stack: [
+  //     "TypeScript",
+  //     "Bun",
+  //     "NextJS",
+  //     "Hono",
+  //     "SQLite",
+  //     "Drizzle",
+  //     "Anthropic",
+  //   ],
+  //   deployment_link: "...",
+  //   fa_link: "https://github.com/ficazam/marcus",
+  // },
   {
     title: "Atlas Link",
     type: "web",
@@ -147,6 +185,7 @@ const getTypeLabel = (type: ProjectType) => {
 const getTypeIcon = (type: ProjectType) => {
   if (type === "web") return "/imgs/web.png";
   if (type === "mobile") return "/imgs/mobile.png";
+  if (type === "ai") return "/imgs/ai.png";
   return "/imgs/auto.png";
 };
 
@@ -232,7 +271,7 @@ const Portfolio = () => {
                               height={24}
                               className="mx-2 my-1"
                             />
-                          )
+                          ),
                       )}
                     </div>
                   </>
@@ -292,6 +331,18 @@ const Portfolio = () => {
                     >
                       <span className="font-heading text-3xl mr-2">→</span>
                       View Backend Repo on GitHub
+                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
+                    </a>
+                  )}
+                  {selectedProject.repo_link && (
+                    <a
+                      href={selectedProject.repo_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
+                    >
+                      <span className="font-heading text-3xl mr-2">→</span>
+                      View Repo on GitHub
                       <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
                     </a>
                   )}

@@ -104,4 +104,23 @@ export const techs = [
     name: "Supabase",
     logo: "/imgs/supabase.png",
   },
+  {
+    name: "Bun",
+    logo: "/imgs/Bun.png",
+  },
+  {
+    name: "Anthropic",
+    logo: "/imgs/Anthropic.png",
+  },
+  {
+    name: "MCP",
+    logo: "/imgs/MCP.png",
+  },
+
+  {
+    name: "Drizzle",
+    logo: "/imgs/Drizzle.png",
+  },
+  { name: "SQLite", logo: "/imgs/SQLite.png" },
+  { name: "Hono", logo: "/imgs/Hono.png" },
 ];
