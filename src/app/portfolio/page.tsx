@@ -33,7 +33,6 @@ const projects: Project[] = [
       "Deployed against real production codebases — autonomously diagnosed and resolved bugs, opened PRs, and closed tickets without human implementation.",
     ],
     stack: ["TypeScript", "Bun", "Anthropic", "MCP"],
-    repo_link: "https://github.com/ficazam/aelisse",
   },
   // {
   //   title: "MARCUS — AI Bid Analyzer",
