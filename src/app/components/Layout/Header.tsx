@@ -15,6 +15,7 @@ export const Header = ({
     { name: 'About Me', link: 'about' },
     { name: 'My Tech Stack', link: 'services' },
     { name: 'My Projects', link: 'portfolio' },
+    { name: 'Build Logs', link: 'build-logs' },
     { name: 'Find Me', link: 'contact' }
   ]
 

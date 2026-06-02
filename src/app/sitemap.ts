@@ -22,5 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://felipeicaza.dev/contact",
       lastModified: new Date().toISOString(),
     },
+    {
+      url: "https://felipeicaza.dev/build-logs",
+      lastModified: new Date().toISOString(),
+    },
   ];
 }
