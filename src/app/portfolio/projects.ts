@@ -1,3 +1,18 @@
+export type ProjectType = "web" | "mobile" | "auto" | "ai";
+
+export type Project = {
+  title: string;
+  type: ProjectType;
+  description: string;
+  impact?: string[];
+  role?: string;
+  stack?: string[];
+  fa_link?: string;
+  ba_link?: string;
+  repo_link?: string;
+  deployment_link?: string;
+};
+
 export const projects: Project[] = [
   {
     title: "AI Infrastructure - AELISSE",
