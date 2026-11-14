@@ -123,4 +123,8 @@ export const techs = [
   },
   { name: "SQLite", logo: "/imgs/SQLite.png" },
   { name: "Hono", logo: "/imgs/Hono.png" },
+  { name: "OpenAI", logo: "/imgs/OpenAI.svg" },
+  { name: "Ollama", logo: "/imgs/Ollama.svg" },
+  { name: "Qwen", logo: "/imgs/Qwen.svg" },
+  { name: "Gemma", logo: "/imgs/Gemma.svg" }, // TODO: placeholder — swap in the real Gemma logo once Felipe sends it
 ];

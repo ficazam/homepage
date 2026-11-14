@@ -28,11 +28,11 @@ const Contact = () => {
             MAIL
           </span>
           <a
-            href="mailto:felipe@felipeicaza.dev"
+            href="mailto:felipeicaza@gmail.com"
             className="block font-body text-2xl relative group"
           >
             <span className="font-heading text-4xl mr-2">→</span>
-            felipe@felipeicaza.dev
+            felipeicaza@gmail.com
           </a>
         </div>
 
@@ -67,8 +67,8 @@ const Contact = () => {
             MY RESUME
           </span>
           <a
-            href="/pdf/FelipeIcaza_FullStack_Developer.pdf"
-            download="FelipeIcaza_FullStack_Developer.pdf"
+            href="/pdf/FelipeIcaza_AIEngineer.pdf"
+            download="FelipeIcaza_AIEngineer.pdf"
             className="block font-body text-2xl relative group"
           >
             <span className="font-heading text-4xl mr-2">→</span>

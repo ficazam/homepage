@@ -19,35 +19,36 @@ const Home = () => {
         </h1>
         <h2 className="text-3xl font-extrabold font-heading text-pink-500 leading-wide tracking-widest">
           <span className="transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            Senior Full-Stack TypeScript Engineer
+            AI Engineer · Agent Systems & AI Products
           </span>
         </h2>
-        <p className="mt-6 text-2xl text-gray-200 max-w-4xl mx-auto font-body">
-          I&apos;m a certified{" "}
-          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            TypeScript application developer
-          </span>
+        <p className="font-body mt-4 text-lg text-gray-200 max-w-4xl mx-auto">
+          Panama City · Relocating to Canada · Remote-ready
         </p>
+
         <p className="font-body mt-6 text-2xl text-gray-200 max-w-4xl mx-auto">
-          I build and modernize production web platforms using{" "}
+          I build{" "}
           <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            React & React Native, NextJS, and Node/NestJS.
+            AI agents
+          </span>{" "}
+          that do real work in production.
+        </p>
+
+        <p className="font-body mt-6 text-lg text-gray-200 max-w-4xl mx-auto text-justify sm:text-center">
+          I design agents like{" "}
+          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            CORA
           </span>
+          , which watches a repo and resolves issues on its own, and{" "}
+          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
+            AELISSE
+          </span>
+          , the multi-agent platform I use to build everything else.
         </p>
 
         <p className="font-body mt-6 text-lg text-gray-200 max-w-4xl mx-auto">
-          Targeting roles in Alberta and the GTA
-        </p>
-
-        <p className="font-body mt-2 text-lg text-gray-200 max-w-4xl mx-auto">
-          Eligible for Canada&apos;s{" "}
-          <span className="font-heading transition-all duration-300 hover:text-white hover:[text-shadow:0_0_5px_rgb(255_0_255/80%),_0_0_10px_rgb(255_0_255/80%),_0_0_15px_rgb(255_0_255/80%),_0_0_20px_rgb(255_0_255/_80%)]">
-            Global Talent Stream
-          </span>
-        </p>
-
-        <p className="font-body mt-2 text-md text-gray-200 max-w-4xl mx-auto">
-          (fast 2-3 week relocation)
+          5+ years of full-stack engineering, 12 years as an architect before
+          that, and open to AI engineering roles in Canada or remote.
         </p>
 
         <div className="flex flex-col sm:flex-row font-body justify-evenly items-center mt-10">

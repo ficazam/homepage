@@ -16,16 +16,17 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Felipe Icaza - Web Developer",
+  metadataBase: new URL("https://felipeicaza.dev"),
+  title: "Felipe Icaza - AI Engineer",
   description:
-    "Showcasing the skills and projects of Felipe Icaza, a passionate and experienced web developer specializing in React, NextJS, and FastAPI.",
+    "Felipe Icaza, AI Engineer focused on agent systems, multi-agent orchestration, and AI products. Based in Panama City, relocating to Canada, remote-ready.",
   icons: {
     icon: '/favico.ico'
   },
     openGraph: {
-    title: "Felipe Icaza - Web Developer Portfolio",
+    title: "Felipe Icaza - AI Engineer, Agent Systems & AI Products",
     description:
-      "Explore my projects and skills as a professional web developer. Specializing in building modern, scalable web applications.",
+      "Explore my projects and skills as an AI Engineer working on agent systems, multi-agent orchestration, and AI products.",
     url: "https://felipeicaza.dev",
     siteName: "Felipe Icaza Portfolio",
     images: [
@@ -41,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Felipe Icaza - Web Developer Portfolio",
+    title: "Felipe Icaza - AI Engineer, Agent Systems & AI Products",
     description:
-      "Explore my projects and skills as a professional web developer. Specializing in building modern, scalable web applications.",
+      "Explore my projects and skills as an AI Engineer working on agent systems, multi-agent orchestration, and AI products.",
     images: ["/og-image.png"],
   },
 };
@@ -67,6 +68,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-auto sm:overflow-hidden`}
+        suppressHydrationWarning
       >
         <MovingBackground />
         <Holder>{children}</Holder>

@@ -3,8 +3,13 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { techs } from "../../../public/imgs/technologies";
-import { type ProjectType, type Project, projects } from "./projects";
+import {
+  type ProjectType,
+  featuredProjects,
+  earlierWorkProjects,
+} from "./projects";
 
 const getTypeLabel = (type: ProjectType) => {
   switch (type) {
@@ -14,6 +19,8 @@ const getTypeLabel = (type: ProjectType) => {
       return "Mobile Application";
     case "auto":
       return "Automation";
+    case "ai":
+      return "AI Project";
     default:
       return "Project";
   }
@@ -29,7 +36,10 @@ const getTypeIcon = (type: ProjectType) => {
 const Portfolio = () => {
   const [selected, setSelected] = useState<number>(0);
 
-  const selectedProject = projects[selected];
+  const selectedProject = featuredProjects[selected];
+  const matchedStackIcons = techs.filter((tech) =>
+    selectedProject.stack?.includes(tech.name),
+  );
 
   return (
     <motion.div
@@ -45,7 +55,7 @@ const Portfolio = () => {
             Projects
           </h1>
 
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <button
               type="button"
               onClick={() => setSelected(index)}
@@ -74,42 +84,42 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <div className="w-full sm:w-[60%]">
+        <div className="w-full sm:w-[60%] sm:h-[560px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={selected}
-              className="bg-gray-800/40 p-6 rounded-lg"
+              className="bg-gray-800/40 p-6 rounded-lg h-full overflow-y-auto"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.5 }}
             >
               <div className="h-full">
+                <p className="text-sm uppercase tracking-widest text-gray-400 font-body mb-1">
+                  {getTypeLabel(selectedProject.type)}
+                </p>
                 <h2 className="text-2xl sm:text-3xl font-semibold text-pink-500 font-heading mb-2">
-                  {getTypeLabel(selectedProject.type)} – {selectedProject.title}
+                  {selectedProject.title}
                 </h2>
 
-                {selectedProject.stack && selectedProject.stack.length > 0 && (
+                {matchedStackIcons.length > 0 && (
                   <>
                     <p className="font-body text-pink-400 leading-wide text-xl">
                       Stack:
                     </p>
                     <div className="flex flex-wrap my-2">
-                      {techs.map(
-                        (tech) =>
-                          selectedProject.stack?.includes(tech.name) && (
-                            <Image
-                              key={tech.name}
-                              src={tech.logo}
-                              alt={tech.name}
-                              title={tech.name}
-                              aria-label={tech.name}
-                              width={24}
-                              height={24}
-                              className="mx-2 my-1"
-                            />
-                          ),
-                      )}
+                      {matchedStackIcons.map((tech) => (
+                        <Image
+                          key={tech.name}
+                          src={tech.logo}
+                          alt={tech.name}
+                          title={tech.name}
+                          aria-label={tech.name}
+                          width={24}
+                          height={24}
+                          className="mx-2 my-1"
+                        />
+                      ))}
                     </div>
                   </>
                 )}
@@ -134,7 +144,30 @@ const Portfolio = () => {
                   </p>
                 )}
 
+                {selectedProject.dates && (
+                  <p className="text-gray-300 mb-4">
+                    <span className="font-semibold text-pink-400">Dates: </span>
+                    {selectedProject.dates}
+                  </p>
+                )}
+
+                {selectedProject.note && (
+                  <p className="text-gray-400 italic mb-4">
+                    {selectedProject.note}
+                  </p>
+                )}
+
                 <div className="flex flex-col items-start justify-end gap-2">
+                  {selectedProject.writingLink && (
+                    <Link
+                      href={selectedProject.writingLink}
+                      className="relative text-pink-400 hover:text-pink-600 transition-all duration-300 group"
+                    >
+                      <span className="font-heading text-3xl mr-2">→</span>
+                      Read the write-up on the Build Logs
+                      <span className="absolute left-0 bottom-0 h-[2px] bg-pink-400 w-0 group-hover:w-full transition-all ease-in duration-300" />
+                    </Link>
+                  )}
                   {selectedProject.deployment_link && (
                     <a
                       href={selectedProject.deployment_link}
@@ -187,6 +220,49 @@ const Portfolio = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
+      </div>
+
+      <div className="w-[90%] mt-20 mb-16">
+        <h2 className="text-3xl sm:text-4xl text-center font-heading text-pink-500 leading-wide tracking-widest mb-8">
+          Earlier Work
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {earlierWorkProjects.map((project) => {
+            const link = project.deployment_link ?? project.fa_link;
+            const content = (
+              <div className="flex flex-col h-full gap-y-2 p-4 rounded-lg bg-gray-800/40 hover:bg-gray-800/60 transition-all duration-300">
+                <p className="text-base font-heading text-pink-400">
+                  {project.title}
+                </p>
+                <p className="text-sm text-gray-300 line-clamp-3">
+                  {project.description}
+                </p>
+                {(project.role || project.dates) && (
+                  <p className="text-xs text-gray-500 mt-auto">
+                    {project.role}
+                    {project.role && project.dates && " · "}
+                    {project.dates}
+                  </p>
+                )}
+              </div>
+            );
+
+            return link ? (
+              <a
+                key={project.title}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                {content}
+              </a>
+            ) : (
+              <div key={project.title}>{content}</div>
+            );
+          })}
         </div>
       </div>
     </motion.div>

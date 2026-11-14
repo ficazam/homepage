@@ -1,9 +1,10 @@
 import { MetadataRoute } from "next";
-import { posts } from "./build-logs/posts";
+import { getAllPosts } from "./build-logs/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts();
   const articleEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `https://felipeicaza.dev/build-logs/${post.id}`,
+    url: `https://felipeicaza.dev/build-logs/${post.slug}`,
     lastModified: post.date,
     changeFrequency: "monthly",
     priority: 0.9,

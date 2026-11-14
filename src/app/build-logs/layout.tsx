@@ -5,7 +5,7 @@ const BASE_URL = "https://felipeicaza.dev";
 export const metadata: Metadata = {
   title: "Build Logs - Felipe Icaza",
   description:
-    "Build logs from Felipe Icaza — writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
+    "Build logs from Felipe Icaza: writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
   keywords: [
     "AI engineering",
     "LLMs",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Build Logs - Felipe Icaza",
     description:
-      "Build logs from Felipe Icaza — writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
+      "Build logs from Felipe Icaza: writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
     url: `${BASE_URL}/build-logs`,
     siteName: "Felipe Icaza",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Build Logs - Felipe Icaza",
     description:
-      "Build logs from Felipe Icaza — writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
+      "Build logs from Felipe Icaza: writing on AI engineering, multi-agent systems, and the practical realities of building with LLMs.",
     images: [`${BASE_URL}/og-image.png`],
   },
 };

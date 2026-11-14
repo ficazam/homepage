@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { posts } from "../posts";
+import { getPostBySlug } from "../posts";
 
 const BASE_URL = "https://felipeicaza.dev";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { id } = await params;
-  const post = posts.find((p) => p.id === parseInt(id));
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return { title: "Build Log - Felipe Icaza" };
   }
 
-  const url = `${BASE_URL}/build-logs/${post.id}`;
+  const url = `${BASE_URL}/build-logs/${post.slug}`;
 
   return {
     title: `${post.title} - Felipe Icaza`,
@@ -55,10 +55,10 @@ export default async function BuildLogLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const post = posts.find((p) => p.id === parseInt(id));
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   const jsonLd = post
     ? {
@@ -74,7 +74,7 @@ export default async function BuildLogLayout({
           url: BASE_URL,
           sameAs: [
             "https://github.com/ficazam",
-            "https://www.linkedin.com/in/felipeicaza/",
+            "https://linkedin.com/in/felipe-icaza",
           ],
         },
         publisher: {
@@ -82,10 +82,10 @@ export default async function BuildLogLayout({
           name: "Felipe Icaza",
           url: BASE_URL,
         },
-        url: `${BASE_URL}/build-logs/${post.id}`,
+        url: `${BASE_URL}/build-logs/${post.slug}`,
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `${BASE_URL}/build-logs/${post.id}`,
+          "@id": `${BASE_URL}/build-logs/${post.slug}`,
         },
         keywords: post.tags.join(", "),
         inLanguage: "en-US",
