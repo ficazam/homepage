@@ -67,7 +67,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-auto sm:overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-auto`}
         suppressHydrationWarning
       >
         <MovingBackground />
