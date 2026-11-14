@@ -53,7 +53,13 @@ export const getPostBySlug = (slug: string): Post | null => {
   if (!fs.existsSync(filePath)) return null;
 
   const { frontmatter, content } = readFrontmatter(slug);
-  const html = marked.parse(content, { async: false }) as string;
+  const rawHtml = marked.parse(content, { async: false }) as string;
+  const html = rawHtml
+    .replace(
+      /<table>/g,
+      '<div class="my-6 overflow-x-auto rounded-lg border border-pink-400/20"><table class="w-full border-collapse text-sm">'
+    )
+    .replace(/<\/table>/g, "</table></div>");
 
   return { ...frontmatter, slug, html };
 };
